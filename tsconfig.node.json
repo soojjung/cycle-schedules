@@ -16,7 +16,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* JavaScript and JSX support */
+    "allowJs": true,
+    "jsx": "react-jsx"
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "src/**/*.js", "src/**/*.jsx"]
 }
