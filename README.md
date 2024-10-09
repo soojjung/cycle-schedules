@@ -1,8 +1,8 @@
-# Period calculator
+# Period Calculator
 
 ## 🎧 About Project
 
-여성 생리 일정 계산기
+생리 예정일 계산기
 
 ## ✨ Installation
 

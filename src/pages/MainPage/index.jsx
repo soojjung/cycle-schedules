@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IconButton, Flex } from 'gestalt';
 import 'gestalt/dist/gestalt.css';
 import { DatePicker } from 'gestalt-datepicker';
@@ -6,6 +7,7 @@ import 'gestalt-datepicker/dist/gestalt-datepicker.css';
 import * as S from './style';
 
 const MainPage = () => {
+  const navigate = useNavigate();
   const [period, setPeriod] = useState(28);
   const [lastPeriodDate, setLastPeriodDate] = useState(null);
 
@@ -19,7 +21,10 @@ const MainPage = () => {
 
   const handleDatePicker = ({ value }) => setLastPeriodDate(value);
 
-  const handleSubmit = () => {};
+  const handleSubmit = () =>
+    setTimeout(() => {
+      navigate('/result');
+    }, 200);
 
   return (
     <S.Container>
