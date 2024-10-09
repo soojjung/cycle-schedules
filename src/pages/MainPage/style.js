@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  min-width: 320px;
+  max-width: 480px;
   padding: 20px;
+  margin: auto;
 `;
 
 export const FlexRow = styled.div`
@@ -31,12 +34,6 @@ export const AreaBox = styled.div`
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
 
-export const PeriodSelector = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-`;
-
 export const P = styled.p`
   font-size: 0.9rem;
   color: #7a7a7a;
@@ -58,39 +55,6 @@ export const PeriodValue = styled.div`
   color: #444;
 `;
 
-export const Calendar = styled.div`
-  width: 100%;
-  max-width: 400px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-`;
-
-export const CalendarHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 10px;
-`;
-
-export const CalendarGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  text-align: center;
-  color: #333;
-`;
-
-export const CalendarDay = styled.div`
-  padding: 10px;
-  background: ${(props) => (props.isSelected ? '#66a3ff' : 'none')};
-  color: ${(props) => (props.isSelected ? '#fff' : '#333')};
-  border-radius: 5px;
-`;
-
 export const CalculateButton = styled.button`
   width: 100%;
   height: 50px;
@@ -101,7 +65,6 @@ export const CalculateButton = styled.button`
 
   font-size: 1rem;
 
-  // background: #66a3ff;
   color: #fff;
   background: linear-gradient(#69d4fb, #1ebefa);
 
