@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
     "gestalt": "^162.0.0",
     "gestalt-datepicker": "^162.1.0",
     "react": "^18.3.1",

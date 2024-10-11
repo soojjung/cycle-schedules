@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
+  height: 100dvh;
+
   padding: 20px;
   margin: auto;
 `;
@@ -25,7 +27,7 @@ export const SubTitle = styled.h2`
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #444;
+  color: #555;
 `;
 
 export const AreaBox = styled.div`
@@ -55,9 +57,15 @@ export const PeriodValue = styled.div`
   color: #444;
 `;
 
+export const ButtonWrapper = styled.div`
+  margin-top: 10px;
+  width: 100%;
+  height: 52px;
+`;
+
 export const CalculateButton = styled.button`
   width: 100%;
-  height: 50px;
+  height: 100%;
   padding: 10px 20px;
 
   border: none;
@@ -70,5 +78,10 @@ export const CalculateButton = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:disabled {
+    background: lightgrey;
+    cursor: default;
   }
 `;

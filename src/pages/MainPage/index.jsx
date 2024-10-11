@@ -8,23 +8,29 @@ import * as S from './style';
 
 const MainPage = () => {
   const navigate = useNavigate();
-  const [period, setPeriod] = useState(28);
-  const [lastPeriodDate, setLastPeriodDate] = useState(null);
+  const [averageCycle, setAverageCycle] = useState(29);
+  const [lastPeriod, setLastPeriod] = useState(null);
 
   const handleDecrease = () => {
-    setPeriod((prev) => Math.max(1, prev - 1));
+    setAverageCycle((prev) => Math.max(1, prev - 1));
   };
 
   const handleIncrease = () => {
-    setPeriod((prev) => prev + 1);
+    setAverageCycle((prev) => prev + 1);
   };
 
-  const handleDatePicker = ({ value }) => setLastPeriodDate(value);
+  const handleDatePicker = ({ value }) => {
+    setLastPeriod(value);
+  };
 
-  const handleSubmit = () =>
+  const handleSubmit = () => {
+    sessionStorage.setItem('averageCycle', averageCycle);
+    sessionStorage.setItem('lastPeriod', lastPeriod);
+
     setTimeout(() => {
-      navigate('/result');
-    }, 200);
+      navigate('/loading');
+    }, 150);
+  };
 
   return (
     <S.Container>
@@ -54,7 +60,7 @@ const MainPage = () => {
             onClick={handleDecrease}
             size="sm"
           />
-          <S.PeriodValue>{period}일</S.PeriodValue>
+          <S.PeriodValue>{averageCycle}일</S.PeriodValue>
           <IconButton
             bgColor="lightGray"
             icon="add"
@@ -65,17 +71,21 @@ const MainPage = () => {
         </Flex>
       </S.AreaBox>
 
-      <S.AreaBox padding="0 0 320px">
+      <S.AreaBox padding="0 28px 165px">
         <S.P>가장 마지막 생리 시작일</S.P>
         <DatePicker
           id="last-period-date"
           onChange={handleDatePicker}
-          value={lastPeriodDate}
+          value={lastPeriod}
           maxDate={new Date()}
         />
       </S.AreaBox>
 
-      <S.CalculateButton onClick={handleSubmit}>계산하기</S.CalculateButton>
+      <S.ButtonWrapper>
+        <S.CalculateButton onClick={handleSubmit} disabled={!lastPeriod}>
+          계산하기
+        </S.CalculateButton>
+      </S.ButtonWrapper>
     </S.Container>
   );
 };

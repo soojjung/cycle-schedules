@@ -25,7 +25,7 @@ export const SubTitle = styled.h2`
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #444;
+  color: #555;
 `;
 
 export const AreaBox = styled.div`
@@ -37,7 +37,7 @@ export const AreaBox = styled.div`
 export const ImageWrapper = styled.div`
   width: 160px;
   height: 160px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: url('images/phone_calendar.png') no-repeat center;
   background-size: cover;
   border-radius: 15px;
@@ -46,7 +46,6 @@ export const ImageWrapper = styled.div`
 export const InfoText = styled.p`
   font-size: 1rem;
   color: #666;
-  font-weight: 400;
 
   span {
     color: #1ebefa; /* 파란색 강조 텍스트 */
@@ -59,7 +58,7 @@ export const InfoGrid = styled.div`
 
   width: 100%;
   max-width: 400px;
-  margin: 40px 0;
+  margin: 40px 12px 0 0;
 `;
 
 export const InfoBox = styled.div`
@@ -83,9 +82,9 @@ export const InfoValue = styled.p`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-top: 10px;
   width: 100%;
   height: 52px;
+  margin-top: 20px;
 `;
 
 export const Button = styled.button`
