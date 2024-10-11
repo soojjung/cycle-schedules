@@ -7,8 +7,6 @@ export const Container = styled.div`
 
   padding: 20px;
   margin: auto;
-
-  overflow-y: scroll;
 `;
 
 export const FlexRow = styled.div`
@@ -29,7 +27,7 @@ export const SubTitle = styled.h2`
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #444;
+  color: #555;
 `;
 
 export const AreaBox = styled.div`
@@ -80,5 +78,10 @@ export const CalculateButton = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:disabled {
+    background: lightgrey;
+    cursor: default;
   }
 `;
