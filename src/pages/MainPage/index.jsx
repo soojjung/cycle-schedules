@@ -65,7 +65,7 @@ const MainPage = () => {
         </Flex>
       </S.AreaBox>
 
-      <S.AreaBox padding="0 0 320px">
+      <S.AreaBox padding="0 28px 165px">
         <S.P>가장 마지막 생리 시작일</S.P>
         <DatePicker
           id="last-period-date"
@@ -75,7 +75,9 @@ const MainPage = () => {
         />
       </S.AreaBox>
 
-      <S.CalculateButton onClick={handleSubmit}>계산하기</S.CalculateButton>
+      <S.ButtonWrapper>
+        <S.CalculateButton onClick={handleSubmit}>계산하기</S.CalculateButton>
+      </S.ButtonWrapper>
     </S.Container>
   );
 };
