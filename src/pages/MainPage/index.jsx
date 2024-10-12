@@ -27,7 +27,7 @@ const MainPage = () => {
 
     setTimeout(() => {
       navigate('/loading');
-    }, 150);
+    }, 250);
   };
 
   return (
@@ -39,7 +39,7 @@ const MainPage = () => {
       </S.Center>
 
       <S.AreaBox padding="0 0 0 28px">
-        <S.P>생리주기</S.P>
+        <S.P margin="0 0 16px 0">생리주기</S.P>
         <Flex
           alignItems="center"
           height="100%"
@@ -66,7 +66,7 @@ const MainPage = () => {
       </S.AreaBox>
 
       <S.AreaBox padding="0 28px">
-        <S.P>가장 마지막 생리 시작일</S.P>
+        <S.P margin="0 0 12px 0">가장 마지막 생리 시작일</S.P>
         <DeviceTypeProvider deviceType="mobile">
           <S.DatePicker
             id="last-period-date"
