@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
-import * as S from './style';
+import * as S from '../ResultPage/style';
 
 const LoadingPage = () => {
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ const LoadingPage = () => {
         <S.SubTitle>계산하고 있어요</S.SubTitle>
 
         <S.AreaBox>
-          <S.ImageWrapper />
+          <S.ImageWrapper url="images/present.png" />
         </S.AreaBox>
         <S.InfoText>
           생리 기간은 가장 보편적인

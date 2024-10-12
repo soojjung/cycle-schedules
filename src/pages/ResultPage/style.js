@@ -30,7 +30,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 36px 0;
+  margin: 44px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
@@ -39,12 +39,15 @@ export const ImageWrapper = styled.div`
   width: 160px;
   height: 160px;
   margin-bottom: 10px;
-  background: url('images/phone_calendar.png') no-repeat center;
+  background: ${(props) => {
+    return `url(${props.url}) no-repeat center`;
+  }};
   background-size: cover;
   border-radius: 15px;
 `;
 
 export const InfoText = styled.p`
+  text-align: center;
   font-size: 1rem;
   color: #666;
 
@@ -57,9 +60,11 @@ export const InfoGrid = styled.div`
   display: flex;
   justify-content: space-between;
 
+  margin: 44px 16px 0 0;
+  padding: 0 16px;
+
   width: 100%;
   max-width: 400px;
-  margin: 40px 12px 0 0;
 `;
 
 export const InfoBox = styled.div`
@@ -83,9 +88,10 @@ export const InfoValue = styled.p`
 `;
 
 export const ButtonWrapper = styled.div`
+  margin-top: 36px;
+  padding: 0 26px;
   width: 100%;
   height: 52px;
-  margin-top: 20px;
 `;
 
 export const Button = styled.button`

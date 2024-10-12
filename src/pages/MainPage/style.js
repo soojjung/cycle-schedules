@@ -18,7 +18,7 @@ export const Center = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 20px;
+  margin: 16px 0 24px;
   font-size: 1rem;
   font-weight: 600;
   color: #7a7a7a;
@@ -32,13 +32,14 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 53px 0 53px;
+  margin: 58px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
 
 export const P = styled.p`
-  margin-bottom: 12px;
+  margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
+
   font-size: 0.9rem;
   color: #7a7a7a;
 `;
@@ -63,6 +64,7 @@ export const DatePicker = styled(_DatePicker)``;
 
 export const ButtonWrapper = styled.div`
   margin-top: 12px;
+  padding: 0 26px;
   width: 100%;
   height: 52px;
 `;
