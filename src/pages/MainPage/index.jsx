@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { IconButton, Flex } from 'gestalt';
+import { IconButton, Flex, DeviceTypeProvider } from 'gestalt';
 import 'gestalt/dist/gestalt.css';
-import { DatePicker } from 'gestalt-datepicker';
-import 'gestalt-datepicker/dist/gestalt-datepicker.css';
 import * as S from './style';
 
 const MainPage = () => {
@@ -34,17 +32,13 @@ const MainPage = () => {
 
   return (
     <S.Container>
-      <S.FlexRow>
+      <S.Center>
         <S.Title>생리 예정일 계산기</S.Title>
-      </S.FlexRow>
+        <S.SubTitle>다음 예정일을</S.SubTitle>
+        <S.SubTitle>알려드릴게요</S.SubTitle>
+      </S.Center>
 
-      <S.SubTitle>
-        다음 예정일을
-        <br />
-        알려드릴게요
-      </S.SubTitle>
-
-      <S.AreaBox>
+      <S.AreaBox padding="0 0 0 28px">
         <S.P>생리주기</S.P>
         <Flex
           alignItems="center"
@@ -71,20 +65,29 @@ const MainPage = () => {
         </Flex>
       </S.AreaBox>
 
-      <S.AreaBox padding="0 28px 165px">
+      <S.AreaBox padding="0 28px">
         <S.P>가장 마지막 생리 시작일</S.P>
-        <DatePicker
-          id="last-period-date"
-          onChange={handleDatePicker}
-          value={lastPeriod}
-          maxDate={new Date()}
-        />
+        <DeviceTypeProvider deviceType="mobile">
+          <S.DatePicker
+            id="last-period-date"
+            onChange={handleDatePicker}
+            value={lastPeriod}
+            maxDate={new Date()}
+            idealDirection="up"
+            selected={true}
+          />
+        </DeviceTypeProvider>
       </S.AreaBox>
 
+      {/* <S.ButtonWrapper>
+        <S.SecondaryButton onClick={() => {}}>
+          주기를 모르겠어요
+        </S.SecondaryButton>
+      </S.ButtonWrapper> */}
       <S.ButtonWrapper>
-        <S.CalculateButton onClick={handleSubmit} disabled={!lastPeriod}>
+        <S.PrimaryButton onClick={handleSubmit} disabled={!lastPeriod}>
           계산하기
-        </S.CalculateButton>
+        </S.PrimaryButton>
       </S.ButtonWrapper>
     </S.Container>
   );
