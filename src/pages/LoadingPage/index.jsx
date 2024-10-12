@@ -3,13 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 import * as S from './style';
 
-const averageCycle = parseInt(sessionStorage.getItem('averageCycle'), 10);
-const lastPeriod = sessionStorage.getItem('lastPeriod');
-
 const LoadingPage = () => {
   const navigate = useNavigate();
   const [nextPeriod, setNextPeriod] = useState('');
   const [dayDifference, setDayDifference] = useState('');
+  const averageCycle = parseInt(sessionStorage.getItem('averageCycle'), 10);
+  const lastPeriod = sessionStorage.getItem('lastPeriod');
 
   useEffect(() => {
     // 1. 다음 생리 예정일: 마지막 생리 시작일(lastPeriod)에 averageCycle(일)을 더한 날짜

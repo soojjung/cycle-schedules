@@ -23,16 +23,16 @@ const defaultData = [
   },
 ];
 
-const storageData = {
-  averageCycle: sessionStorage.getItem('averageCycle'),
-  dayDifference: sessionStorage.getItem('dayDifference'),
-  nextPeriod: sessionStorage.getItem('nextPeriod'),
-};
-
 const ResultPage = () => {
   const navigate = useNavigate();
   const [dayDiff, setDayDiff] = useState('');
   const [data, setData] = useState(defaultData);
+
+  const storageData = {
+    averageCycle: sessionStorage.getItem('averageCycle'),
+    dayDifference: sessionStorage.getItem('dayDifference'),
+    nextPeriod: sessionStorage.getItem('nextPeriod'),
+  };
 
   useEffect(() => {
     if (storageData.dayDifference) {

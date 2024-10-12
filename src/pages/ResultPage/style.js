@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
+  height: 100dvh;
   padding: 20px;
   margin: auto;
 `;
@@ -15,7 +16,7 @@ export const Center = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 24px;
+  margin: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: #7a7a7a;
@@ -29,7 +30,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 32px 0;
+  margin: 36px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;

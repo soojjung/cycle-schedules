@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { DatePicker as _DatePicker } from 'gestalt-datepicker';
+import 'gestalt-datepicker/dist/gestalt-datepicker.css';
 
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
   height: 100dvh;
-
   padding: 20px;
   margin: auto;
 `;
 
-export const FlexRow = styled.div`
+export const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +18,7 @@ export const FlexRow = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 24px;
+  margin: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: #7a7a7a;
@@ -31,12 +32,13 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 28px 0;
+  margin: 53px 0 53px;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
 
 export const P = styled.p`
+  margin-bottom: 12px;
   font-size: 0.9rem;
   color: #7a7a7a;
 `;
@@ -57,13 +59,15 @@ export const PeriodValue = styled.div`
   color: #444;
 `;
 
+export const DatePicker = styled(_DatePicker)``;
+
 export const ButtonWrapper = styled.div`
-  margin-top: 10px;
+  margin-top: 12px;
   width: 100%;
   height: 52px;
 `;
 
-export const CalculateButton = styled.button`
+export const PrimaryButton = styled.button`
   width: 100%;
   height: 100%;
   padding: 10px 20px;
@@ -83,5 +87,23 @@ export const CalculateButton = styled.button`
   &:disabled {
     background: lightgrey;
     cursor: default;
+  }
+`;
+
+export const SecondaryButton = styled.button`
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+
+  border-radius: 50px;
+  border: 1px solid #1ebefa;
+
+  font-size: 1rem;
+
+  color: #1ebefa;
+  background: #fff;
+
+  &:hover {
+    cursor: pointer;
   }
 `;
