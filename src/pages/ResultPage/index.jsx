@@ -77,7 +77,7 @@ const ResultPage = () => {
         <S.SubTitle>생리 사이클 계산 결과</S.SubTitle>
 
         <S.AreaBox>
-          <S.ImageWrapper url="images/phone_calendar.png" />
+          <S.ImageWrapper url="images/phone_calendar.webp" />
         </S.AreaBox>
         <S.InfoText>
           오늘부터 <span>{dayDiff}일</span> 뒤 시작이에요
