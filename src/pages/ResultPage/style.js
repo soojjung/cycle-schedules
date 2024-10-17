@@ -60,7 +60,7 @@ export const InfoGrid = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin: 46px 16px 8px 0;
+  margin: 46px 20px 8px 0;
   padding: 0 16px;
 
   width: 100%;

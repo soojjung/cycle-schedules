@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
+import { motion } from 'framer-motion';
 import * as S from '../ResultPage/style';
 
 const LoadingPage = () => {
@@ -34,7 +35,7 @@ const LoadingPage = () => {
 
       setTimeout(function () {
         navigate('/result');
-      }, 2800);
+      }, 2500);
     }
   }, [nextPeriod, dayDifference]);
 
@@ -47,7 +48,17 @@ const LoadingPage = () => {
         <S.SubTitle>계산하고 있어요</S.SubTitle>
 
         <S.AreaBox>
-          <S.ImageWrapper url="images/present.webp" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <S.ImageWrapper url="images/present.webp" />
+          </motion.div>
         </S.AreaBox>
         <S.InfoText>
           생리 기간은 가장 보편적인
