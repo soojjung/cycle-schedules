@@ -63,6 +63,12 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     cursor: pointer;
   }
+
+  .rdp-root {
+  --rdp-accent-color: #2C87FF; /* Change the accent color */
+  --rdp-accent-background-color: #f0f0f0; /* Change the accent background color. */
+  /* Add more CSS variables here. */
+}
 `;
 
 export default GlobalStyle;
