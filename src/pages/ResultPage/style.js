@@ -89,7 +89,7 @@ export const InfoValue = styled.p`
 
 export const ButtonWrapper = styled.div`
   margin-top: 36px;
-  padding: 0 26px;
+  padding: 0 28px;
   width: 100%;
   height: 52px;
 `;

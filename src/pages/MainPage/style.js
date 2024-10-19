@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { DatePicker as _DatePicker } from 'gestalt-datepicker';
-import 'gestalt-datepicker/dist/gestalt-datepicker.css';
 
 export const Container = styled.div`
   min-width: 320px;
@@ -32,7 +30,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 58px 0;
+  margin: 40px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
@@ -60,11 +58,9 @@ export const PeriodValue = styled.div`
   color: #444;
 `;
 
-export const DatePicker = styled(_DatePicker)``;
-
 export const ButtonWrapper = styled.div`
   margin-top: 12px;
-  padding: 0 26px;
+  padding: 0 28px;
   width: 100%;
   height: 52px;
 `;
