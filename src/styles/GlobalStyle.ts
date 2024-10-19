@@ -65,10 +65,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .rdp-root {
-  --rdp-accent-color: #2C87FF; /* Change the accent color */
-  --rdp-accent-background-color: #f0f0f0; /* Change the accent background color. */
-  /* Add more CSS variables here. */
-}
+    font-size: 14px;
+    --rdp-accent-color: #4896ff; /* Change the accent color */
+    --rdp-accent-background-color: #f0f0f0; /* Change the accent background color. */
+    --rdp-selected-font: 600 14px "Pretendard";
+    --rdp-today-color: rgb(0, 0, 0);
+    --rdp-day-height: 2.5rem;
+    --rdp-day-width: 2.5rem;
+  }
 `;
 
 export default GlobalStyle;

@@ -8,11 +8,24 @@ export const Container = styled.div`
   margin: auto;
 `;
 
+export const IconWrapper = styled.span`
+  position: absolute;
+  top: 42px;
+  left: 20px;
+`;
+
 export const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Title = styled.h1`
@@ -24,15 +37,29 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #555;
+`;
+
+export const SubText = styled.h3`
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #777;
 `;
 
 export const AreaBox = styled.div`
   margin: 44px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
+`;
+
+export const P = styled.p`
+  margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
+
+  font-size: 0.9rem;
+  color: #7a7a7a;
 `;
 
 export const ImageWrapper = styled.div`
@@ -94,10 +121,9 @@ export const ButtonWrapper = styled.div`
   height: 52px;
 `;
 
-export const Button = styled.button`
+export const PrimaryButton = styled.button`
   width: 100%;
   height: 100%;
-
   padding: 10px 20px;
 
   border: none;
@@ -110,5 +136,10 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:disabled {
+    background: lightgrey;
+    cursor: default;
   }
 `;
