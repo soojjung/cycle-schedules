@@ -93,7 +93,7 @@ const ResultPage = () => {
         </S.InfoGrid>
 
         <S.ButtonWrapper>
-          <S.Button onClick={goHome}>처음으로</S.Button>
+          <S.PrimaryButton onClick={goHome}>처음으로</S.PrimaryButton>
         </S.ButtonWrapper>
       </S.Center>
     </S.Container>

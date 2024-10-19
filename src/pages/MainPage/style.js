@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  height: 100dvh;
-  padding: 20px;
+  // height: 100dvh;
+  padding: 20px 20px 60px;
   margin: auto;
 `;
 
@@ -16,7 +16,7 @@ export const Center = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 16px 0 24px;
+  margin: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: #7a7a7a;
@@ -30,7 +30,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const AreaBox = styled.div`
-  margin: 40px 0;
+  margin: 48px 0;
 
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
@@ -42,15 +42,6 @@ export const P = styled.p`
   color: #7a7a7a;
 `;
 
-export const Button = styled.button`
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #333;
-
-  cursor: pointer;
-`;
-
 export const PeriodValue = styled.div`
   margin: 0 10px;
   font-size: 2.3rem;
@@ -59,7 +50,7 @@ export const PeriodValue = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-top: 12px;
+  margin: 12px 0;
   padding: 0 28px;
   width: 100%;
   height: 52px;

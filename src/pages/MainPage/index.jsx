@@ -81,15 +81,19 @@ const MainPage = () => {
         </S.Center>
       </S.AreaBox>
 
-      {/* <S.ButtonWrapper>
-        <S.SecondaryButton onClick={() => {}}>
-          주기를 모르겠어요
-        </S.SecondaryButton>
-      </S.ButtonWrapper> */}
       <S.ButtonWrapper>
         <S.PrimaryButton onClick={handleSubmit} disabled={!lastPeriod}>
           계산하기
         </S.PrimaryButton>
+      </S.ButtonWrapper>
+      <S.ButtonWrapper>
+        <S.SecondaryButton
+          onClick={() => {
+            navigate('/list');
+          }}
+        >
+          주기를 몰라요
+        </S.SecondaryButton>
       </S.ButtonWrapper>
     </S.Container>
   );
