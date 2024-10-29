@@ -45,7 +45,7 @@ const ResultPage = () => {
       setData((prev) =>
         prev.map((item) =>
           item.id === 'averageCycle'
-            ? { ...item, value: storageData.averageCycle }
+            ? { ...item, value: `${storageData.averageCycle}일` }
             : item
         )
       );

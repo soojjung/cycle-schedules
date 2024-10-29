@@ -2,15 +2,15 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { Box, Flex, Icon, IconButton } from 'gestalt';
-import { DateField } from 'gestalt-datepicker';
-import 'gestalt-datepicker/dist/gestalt-datepicker.css';
+import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/dist/style.css';
 import * as S from '../../styles/pageStyle';
 
 const ListPage = () => {
   const navigate = useNavigate();
   const [dateValues, setDateValues] = useState([
-    { id: 1, date: null },
-    { id: 2, date: null },
+    { id: 1, date: null, isOpen: false },
+    { id: 2, date: null, isOpen: false },
   ]);
 
   const onAdd = () => {
@@ -62,49 +62,64 @@ const ListPage = () => {
       </S.Center>
       <S.AreaBox padding="0 0 0 28px">
         <S.P margin="0 0 8px 0">최근 생리일</S.P>
-        <Box padding={4} width="100%">
+        <Box padding={2} width="100%">
           <Flex direction="column" gap={6} width="100%">
             {dateValues.map((dateValue) => (
-              <S.Flex key={dateValue.id}>
-                <DateField
-                  id={`size-datefield-md-${dateValue.id}`}
-                  onChange={({ value }) => {
+              <S.Flex key={dateValue.id} style={{ position: 'relative' }}>
+                <S.DateInput
+                  type="text"
+                  placeholder="YYYY-MM-DD"
+                  value={
+                    dateValue.date
+                      ? dateValue.date.toLocaleDateString('ko-KR')
+                      : ''
+                  }
+                  onFocus={() => {
                     setDateValues((prev) =>
                       prev.map((item) =>
                         item.id === dateValue.id
-                          ? { ...item, date: value }
+                          ? { ...item, isOpen: true }
                           : item
                       )
                     );
                   }}
-                  // onClearInput={() =>
-                  //   setDateValues((prev) =>
-                  //     prev.map((item) =>
-                  //       item.id === dateValue.id
-                  //         ? { ...item, date: null }
-                  //         : item
-                  //     )
-                  //   )
-                  // }
-                  size="md"
-                  value={dateValue.date}
-                  disableRange="disableFuture"
-                  errorMessage={
-                    (dateValue.errorMessage &&
-                      dateValue.errorMessage === 'disableFuture' &&
-                      '입력 가능한 날짜가 아닙니다.') ||
-                    undefined
-                  }
-                  onError={({ errorMessage }) => {
-                    setDateValues((prev) =>
-                      prev.map((item) =>
-                        item.id === dateValue.id
-                          ? { ...item, errorMessage: errorMessage }
-                          : { ...item, errorMessage: undefined }
-                      )
-                    );
-                  }}
+                  readOnly
                 />
+                {dateValue.isOpen && (
+                  <>
+                    <S.CalendarOverlay
+                      onClick={() => {
+                        setTimeout(
+                          () =>
+                            setDateValues((prev) =>
+                              prev.map((item) =>
+                                item.id === dateValue.id
+                                  ? { ...item, isOpen: false }
+                                  : item
+                              )
+                            ),
+                          200
+                        );
+                      }}
+                    />
+                    <S.CalendarPopup>
+                      <DayPicker
+                        mode="single"
+                        selected={dateValue.date}
+                        onSelect={(date) => {
+                          setDateValues((prev) =>
+                            prev.map((item) =>
+                              item.id === dateValue.id
+                                ? { ...item, date: date, isOpen: false }
+                                : item
+                            )
+                          );
+                        }}
+                        disabled={{ after: new Date() }}
+                      />
+                    </S.CalendarPopup>
+                  </>
+                )}
                 <IconButton
                   bgColor="lightGray"
                   icon="dash"

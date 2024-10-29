@@ -32,9 +32,11 @@ const LoadingPage = () => {
 
       sessionStorage.setItem('dayDifference', dayDifference);
 
-      setTimeout(function () {
+      const timer = setTimeout(() => {
         navigate('/result');
       }, 2400);
+
+      return () => clearTimeout(timer);
     }
   }, [nextPeriod, dayDifference]);
 

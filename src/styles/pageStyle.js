@@ -3,14 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  height: 100dvh;
   padding: 20px 20px 60px;
   margin: auto;
 `;
 
 export const IconWrapper = styled.span`
   position: absolute;
-  top: 42px;
+  top: 28px;
   left: 20px;
 `;
 
@@ -46,7 +45,7 @@ export const SubText = styled.h3`
   margin: 8px 0 0;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #777;
+  color: #999;
 `;
 
 export const AreaBox = styled.div`
@@ -117,6 +116,51 @@ export const InfoValue = styled.p`
   font-size: 1.2rem;
   font-weight: 600;
   color: #555;
+`;
+
+export const DateInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 15px;
+
+  font-size: 15px;
+  text-align: center;
+
+  color: #8a8a8a;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+
+  ::placeholder {
+    font-weight: normal;
+    color: #8a8a8a;
+  }
+`;
+
+export const CalendarOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10; /* Ensures it covers the background but is below the calendar */
+  background: rgba(138, 134, 133, 0.2); /* Semi-transparent black */
+`;
+
+export const CalendarPopup = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20; /* Ensures it stays above the overlay */
+
+  max-width: 300px;
+
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow for better visibility */
 `;
 
 export const ButtonWrapper = styled.div`
