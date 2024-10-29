@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { Box, Flex, Icon, IconButton } from 'gestalt';
 import { DateField } from 'gestalt-datepicker';
 import 'gestalt-datepicker/dist/gestalt-datepicker.css';
-import * as S from '../ResultPage/style';
+import * as S from '../../styles/pageStyle';
 
 const ListPage = () => {
   const navigate = useNavigate();
