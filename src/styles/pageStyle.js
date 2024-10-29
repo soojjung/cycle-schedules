@@ -3,14 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  height: 100dvh;
-  padding: 20px;
+  padding: 20px 20px 60px;
   margin: auto;
 `;
 
 export const IconWrapper = styled.span`
   position: absolute;
-  top: 42px;
+  top: 28px;
   left: 20px;
 `;
 
@@ -29,7 +28,7 @@ export const Flex = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 20px;
+  height: 44px;
   font-size: 1rem;
   font-weight: 600;
   color: #7a7a7a;
@@ -46,20 +45,25 @@ export const SubText = styled.h3`
   margin: 8px 0 0;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #777;
+  color: #999;
 `;
 
 export const AreaBox = styled.div`
-  margin: 44px 0;
-
+  margin: 28px 0;
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
 `;
 
 export const P = styled.p`
   margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
-
   font-size: 0.9rem;
   color: #7a7a7a;
+`;
+
+export const PeriodValue = styled.div`
+  margin: 0 10px;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: #444;
 `;
 
 export const ImageWrapper = styled.div`
@@ -114,8 +118,53 @@ export const InfoValue = styled.p`
   color: #555;
 `;
 
+export const DateInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 15px;
+
+  font-size: 15px;
+  text-align: center;
+
+  color: #8a8a8a;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+
+  ::placeholder {
+    font-weight: normal;
+    color: #8a8a8a;
+  }
+`;
+
+export const CalendarOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10; /* Ensures it covers the background but is below the calendar */
+  background: rgba(138, 134, 133, 0.2); /* Semi-transparent black */
+`;
+
+export const CalendarPopup = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20; /* Ensures it stays above the overlay */
+
+  max-width: 300px;
+
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow for better visibility */
+`;
+
 export const ButtonWrapper = styled.div`
-  margin-top: 36px;
+  margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
   padding: 0 28px;
   width: 100%;
   height: 52px;
@@ -141,5 +190,23 @@ export const PrimaryButton = styled.button`
   &:disabled {
     background: lightgrey;
     cursor: default;
+  }
+`;
+
+export const SecondaryButton = styled.button`
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+
+  border-radius: 50px;
+  border: 1px solid #1ebefa;
+
+  font-size: 1rem;
+
+  color: #1ebefa;
+  background: #fff;
+
+  &:hover {
+    cursor: pointer;
   }
 `;

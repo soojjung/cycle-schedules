@@ -4,7 +4,7 @@ import { IconButton, Flex, DeviceTypeProvider } from 'gestalt';
 import 'gestalt/dist/gestalt.css';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/style.css';
-import * as S from './style';
+import * as S from '../../styles/pageStyle';
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ const MainPage = () => {
       </S.AreaBox>
 
       <S.AreaBox padding="0 28px">
-        <S.P margin="0 0 4px 0">가장 마지막 생리 시작일</S.P>
+        <S.P>가장 마지막 생리 시작일</S.P>
         <S.Center>
           <DayPicker
             mode="single"
@@ -86,7 +86,7 @@ const MainPage = () => {
           계산하기
         </S.PrimaryButton>
       </S.ButtonWrapper>
-      <S.ButtonWrapper>
+      <S.ButtonWrapper margin="12px 0 0">
         <S.SecondaryButton
           onClick={() => {
             navigate('/list');

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as S from './style';
+import * as S from '../../styles/pageStyle';
 
 const defaultData = [
   {
@@ -45,7 +45,7 @@ const ResultPage = () => {
       setData((prev) =>
         prev.map((item) =>
           item.id === 'averageCycle'
-            ? { ...item, value: storageData.averageCycle }
+            ? { ...item, value: `${storageData.averageCycle}일` }
             : item
         )
       );
@@ -92,7 +92,7 @@ const ResultPage = () => {
           ))}
         </S.InfoGrid>
 
-        <S.ButtonWrapper>
+        <S.ButtonWrapper margin="36px 0 0">
           <S.PrimaryButton onClick={goHome}>처음으로</S.PrimaryButton>
         </S.ButtonWrapper>
       </S.Center>

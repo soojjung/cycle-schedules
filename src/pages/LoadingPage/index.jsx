@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
-// import { motion } from 'framer-motion';
-import * as S from '../ResultPage/style';
+import * as S from '../../styles/pageStyle';
 
 const LoadingPage = () => {
   const navigate = useNavigate();
@@ -33,9 +32,11 @@ const LoadingPage = () => {
 
       sessionStorage.setItem('dayDifference', dayDifference);
 
-      setTimeout(function () {
+      const timer = setTimeout(() => {
         navigate('/result');
-      }, 2500);
+      }, 2400);
+
+      return () => clearTimeout(timer);
     }
   }, [nextPeriod, dayDifference]);
 
@@ -57,7 +58,7 @@ const LoadingPage = () => {
               ease: [0, 0.71, 0.2, 1.01],
             }}
           > */}
-          <S.ImageWrapper url="images/present.webp" />
+          <S.ImageWrapper url="images/calendar.gif" />
           {/* </motion.div> */}
         </S.AreaBox>
         <S.InfoText>
