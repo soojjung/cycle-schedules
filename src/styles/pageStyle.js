@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  height: 100dvh;
+  height: 100svh;
   padding: 20px;
   margin: auto;
+  overflow: hidden; /* 스크롤 방지 */
 `;
 
 export const IconWrapper = styled.span`
