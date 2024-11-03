@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  padding: 20px 20px 20px;
+  height: 100dvh;
+  padding: 20px;
   margin: auto;
 `;
 
 export const IconWrapper = styled.span`
   position: absolute;
-  top: 28px;
+  top: 20px;
   left: 20px;
 `;
 
