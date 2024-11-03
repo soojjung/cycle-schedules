@@ -48,19 +48,9 @@ const LoadingPage = () => {
         <S.SubTitle>생리 사이클을</S.SubTitle>
         <S.SubTitle>계산하고 있어요</S.SubTitle>
 
-        <S.AreaBox>
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 0,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          > */}
+        <S.AreaBox40>
           <S.ImageWrapper url="images/calendar.gif" />
-          {/* </motion.div> */}
-        </S.AreaBox>
+        </S.AreaBox40>
         <S.InfoText>
           생리 기간은 가장 보편적인
           <br />
