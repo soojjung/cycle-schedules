@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  padding: 20px 20px 60px;
+  padding: 20px 20px 20px;
   margin: auto;
 `;
 
@@ -28,9 +28,10 @@ export const Flex = styled.div`
 `;
 
 export const Title = styled.h1`
-  height: 44px;
-  font-size: 1rem;
-  font-weight: 600;
+  height: 36px;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: 500;
   color: #7a7a7a;
 `;
 
@@ -38,6 +39,7 @@ export const SubTitle = styled.h2`
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
+  line-height: 1.9rem;
   color: #555;
 `;
 
@@ -49,13 +51,18 @@ export const SubText = styled.h3`
 `;
 
 export const AreaBox = styled.div`
-  margin: 28px 0;
+  margin: ${(props) => (props.margin ? `${props.margin}` : '24px 0')};
   padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
+`;
+
+export const AreaBox40 = styled.div`
+  margin: 40px 0;
 `;
 
 export const P = styled.p`
   margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
   font-size: 0.9rem;
+  line-height: 0.9rem;
   color: #7a7a7a;
 `;
 
@@ -69,7 +76,6 @@ export const PeriodValue = styled.div`
 export const ImageWrapper = styled.div`
   width: 160px;
   height: 160px;
-  margin-bottom: 10px;
   background: ${(props) => {
     return `url(${props.url}) no-repeat center`;
   }};

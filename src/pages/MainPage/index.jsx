@@ -37,7 +37,7 @@ const MainPage = () => {
       </S.Center>
 
       <S.AreaBox padding="0 0 0 28px">
-        <S.P margin="0 0 12px 0">생리주기</S.P>
+        <S.P>생리주기</S.P>
         <Flex
           alignItems="center"
           height="100%"
@@ -63,7 +63,7 @@ const MainPage = () => {
         </Flex>
       </S.AreaBox>
 
-      <S.AreaBox padding="0 28px">
+      <S.AreaBox margin="26px 0 20px" padding="0 28px">
         <S.P>가장 마지막 생리 시작일</S.P>
         <S.Center>
           <DayPicker
@@ -86,7 +86,7 @@ const MainPage = () => {
           계산하기
         </S.PrimaryButton>
       </S.ButtonWrapper>
-      <S.ButtonWrapper margin="12px 0 0">
+      <S.ButtonWrapper margin="10px 0 0">
         <S.SecondaryButton
           onClick={() => {
             navigate('/list');

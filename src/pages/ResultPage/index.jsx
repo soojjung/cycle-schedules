@@ -76,9 +76,9 @@ const ResultPage = () => {
         <S.SubTitle>사용자 님의</S.SubTitle>
         <S.SubTitle>생리 사이클 계산 결과</S.SubTitle>
 
-        <S.AreaBox>
+        <S.AreaBox40>
           <S.ImageWrapper url="images/phone_calendar.webp" />
-        </S.AreaBox>
+        </S.AreaBox40>
         <S.InfoText>
           {dayDiff && `오늘부터 ${dayDiff}일 뒤 시작이에요 🗓️`}
         </S.InfoText>
@@ -92,7 +92,7 @@ const ResultPage = () => {
           ))}
         </S.InfoGrid>
 
-        <S.ButtonWrapper margin="36px 0 0">
+        <S.ButtonWrapper margin="44px 0 0">
           <S.PrimaryButton onClick={goHome}>처음으로</S.PrimaryButton>
         </S.ButtonWrapper>
       </S.Center>
