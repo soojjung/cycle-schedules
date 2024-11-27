@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   min-width: 320px;
-  max-width: 480px;
+  max-width: 460px;
   height: 100dvh;
   padding: 20px;
   margin: auto;
@@ -92,6 +92,10 @@ export const InfoText = styled.p`
 
   span {
     color: #1ebefa; /* 파란색 강조 텍스트 */
+  }
+
+  strong {
+    font-weight: 600;
   }
 `;
 

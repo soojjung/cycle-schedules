@@ -80,7 +80,11 @@ const ResultPage = () => {
           <S.ImageWrapper url="images/phone_calendar.webp" />
         </S.AreaBox40>
         <S.InfoText>
-          {dayDiff && `오늘부터 ${dayDiff}일 뒤 시작이에요 🗓️`}
+          {dayDiff && (
+            <>
+              오늘부터 <strong>{dayDiff}일</strong> 뒤 시작이에요 🗓️
+            </>
+          )}
         </S.InfoText>
 
         <S.InfoGrid>
