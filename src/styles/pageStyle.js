@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-width: 320px;
   max-width: 480px;
-  height: 100svh;
+  height: 100dvh;
   padding: 20px;
   margin: auto;
   overflow: hidden; /* 스크롤 방지 */
