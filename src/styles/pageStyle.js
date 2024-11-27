@@ -40,7 +40,7 @@ export const SubTitle = styled.h2`
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
-  line-height: 1.9rem;
+  line-height: 1.8rem;
   color: #555;
 `;
 
@@ -178,7 +178,7 @@ export const ButtonWrapper = styled.div`
   margin: ${(props) => (props.margin ? `${props.margin}` : '0')};
   padding: 0 28px;
   width: 100%;
-  height: 52px;
+  height: 48px;
 `;
 
 export const PrimaryButton = styled.button`
