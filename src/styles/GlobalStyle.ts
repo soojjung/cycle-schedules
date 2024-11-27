@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    height: 100svh; /* 화면 높이에 맞게 적용 */
+    height: 100dvh; /* 화면 높이에 맞게 적용 */
     margin: 0; /* 여백 제거 */
 
     line-height: 1.5;
