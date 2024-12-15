@@ -57,7 +57,7 @@ export const AreaBox = styled.div`
 `;
 
 export const AreaBox40 = styled.div`
-  margin: 40px 0;
+  margin: 44px 0;
 `;
 
 export const P = styled.p`
