@@ -96,7 +96,7 @@ const ResultPage = () => {
           ))}
         </S.InfoGrid>
 
-        <S.ButtonWrapper margin="44px 0 0">
+        <S.ButtonWrapper margin="60px 0 0">
           <S.PrimaryButton onClick={goHome}>처음으로</S.PrimaryButton>
         </S.ButtonWrapper>
       </S.Center>
